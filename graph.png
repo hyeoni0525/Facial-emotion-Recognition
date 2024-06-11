@@ -1,0 +1,11 @@
+# temp__
+모델 결과 그래프
+![모델 결과 그래프]"C:\Users\82106\OneDrive\사진\스크린샷\epochs10batch32.png"
+![모델 결과 그래프]"C:\Users\82106\OneDrive\사진\스크린샷\epochs10batch16.png"
+![모델 결과 그래프]"C:\Users\82106\OneDrive\사진\스크린샷\epochs50batch32.png"
+![모델 결과 그래프]"C:\Users\82106\OneDrive\사진\스크린샷\epochs50batch16.png"
+![모델 결과 그래프]"C:\Users\82106\OneDrive\사진\스크린샷\epochs50batch32 dropout0.1에서0.3.png"
+![모델 결과 그래프]"C:\Users\82106\OneDrive\사진\스크린샷\epochs50batch32 증강변화rotation_range=30에서40 width_shift_range=0.2,          height_shift_range=0.2.png"
+![모델 결과 그래프]"C:\Users\82106\OneDrive\사진\스크린샷\resnet50+reduceLR.png"
+![모델 결과 그래프]"C:\Users\82106\OneDrive\사진\스크린샷\MobileNetV2.png"
+

@@ -50,6 +50,8 @@ FER2013의 과제 얼굴 표정에 나타난 감정을 기반으로 각 얼굴�
 모델 평가에 사용된 지표는 accuracy와 f1 score가 있습니다. 그래프는
 
 ![epochs10batch32](https://github.com/hyeoni0525/Facial-emotion-Recognition/assets/170999814/0c15e09e-a24e-4e02-8d7d-699e281df0de)
+![epochs10batch16](https://github.com/hyeoni0525/Facial-emotion-Recognition/assets/170999814/dae8787a-dd19-43c3-a01f-726f01dc6626)
+
 ***
 
 ![곽철이](곽철이.png)

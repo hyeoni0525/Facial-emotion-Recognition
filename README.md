@@ -47,10 +47,15 @@ FER2013의 과제 얼굴 표정에 나타난 감정을 기반으로 각 얼굴�
 이 모델은 입력 이미지에서 특징을 추출하고, 이를 기반으로 감정 클래스를 예측하는 CNN 모델입니다. 여러 Conv2D와 MaxPooling2D 레이어를 통해 특징을 추출하고, Fully Connected 레이어를 통해 감정을 분류합니다. Dropout 레이어를 추가하여 과적합을 방지하고 모델의 일반화 성능을 높였습니다.
 
 ## 실험 결과
-모델 평가에 사용된 지표는 accuracy와 f1 score가 있습니다. 그래프는
-
-![epochs10batch32](https://github.com/hyeoni0525/Facial-emotion-Recognition/assets/170999814/0c15e09e-a24e-4e02-8d7d-699e281df0de)
+모델 평가에 사용된 지표는 accuracy와 f1 score가 있습니다. 그래프는 각각 순서대로 (epochs10 batch16), (epochs10 batch32), (epochs50 batch16), (epochs50 batch32), (epochs50 batch32 + 데이터 증강), (resnet50+reduceLR), (MobileNetV2)순 입니다
+이와 같이 다양한 ablation study를 통해 가장 최적의 값을 구하고
 ![epochs10batch16](https://github.com/hyeoni0525/Facial-emotion-Recognition/assets/170999814/dae8787a-dd19-43c3-a01f-726f01dc6626)
+![epochs10batch32](https://github.com/hyeoni0525/Facial-emotion-Recognition/assets/170999814/0c15e09e-a24e-4e02-8d7d-699e281df0de)
+![epochs50batch16](https://github.com/hyeoni0525/Facial-emotion-Recognition/assets/170999814/0c18864a-ac64-41f2-aa5c-e364b5564281)
+![epochs50batch32](https://github.com/hyeoni0525/Facial-emotion-Recognition/assets/170999814/5fbc9f51-5131-4670-b1e1-e82149277ada)
+![epochs50batch32 증강변화rotation_range=30에서40 width_shift_range=0 2,          height_shift_range=0 2](https://github.com/hyeoni0525/Facial-emotion-Recognition/assets/170999814/edd450bd-710f-416a-a664-a48a3fedb698)
+![resnet50+reduceLR](https://github.com/hyeoni0525/Facial-emotion-Recognition/assets/170999814/a0d4fd97-9b50-47fe-8f3d-8cf26c3bcf74)
+![MobileNetV2](https://github.com/hyeoni0525/Facial-emotion-Recognition/assets/170999814/7137f830-4c8a-489a-a4cc-5683d1a13dfb)
 
 ***
 

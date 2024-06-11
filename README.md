@@ -42,13 +42,31 @@
 FER2013의 과제 얼굴 표정에 나타난 감정을 기반으로 각 얼굴을 7가지 범주(0=화남, 1=혐오, 2=두려움, 3=행복, 4=슬픔, 5=놀람, 6=보통) 중 하나로 분류하는 것입니다. 훈련 세트는 28,709개의 예시로 구성되어 있으며, 공개 테스트 세트는 3,589개의 예시로 구성되어 있습니다.
 
 ## 모델 설명
-기본적으로 다양한 모델을 사용했으나 결과가 가장 높게 나왔던 
+![스크린샷 2024-06-11 230752](https://github.com/hyeoni0525/Facial-emotion-Recognition/assets/170999814/d279a0af-0346-4f2b-92ce-824985c78e10)
+
+기본적으로 다양한 모델을 사용했으나 결과가 가장 높게 나왔던 2D CNN 모델을 선택했습니다. 기존의 DNN은 고해상도의 이미지를 처리할 때 입력 뉴런의 수가 급격하게 증가하게 되고 파라미터의 수도 급격하게 늘어나기 때문에 이미지나 영상과 같은 데이터를 처리할 때 생기는 문제점이 발생합니다. 이를 보완하기 위해 뉴런이 특정 범위에 있는 이미지만 학습하기 때문에 훨씬 적은 양의 파라미터가 필요로 하는 CNN 모델이 적합하다고 생각했습니다.
 
 이 모델은 입력 이미지에서 특징을 추출하고, 이를 기반으로 감정 클래스를 예측하는 CNN 모델입니다. 여러 Conv2D와 MaxPooling2D 레이어를 통해 특징을 추출하고, Fully Connected 레이어를 통해 감정을 분류합니다. Dropout 레이어를 추가하여 과적합을 방지하고 모델의 일반화 성능을 높였습니다.
 
 ## 실험 결과
-모델 평가에 사용된 지표는 accuracy와 f1 score가 있습니다. 그래프는 각각 순서대로 (epochs10 batch16), (epochs10 batch32), (epochs50 batch16), (epochs50 batch32), (epochs50 batch32 + 데이터 증강), (resnet50+reduceLR), (MobileNetV2)순 입니다
-이와 같이 다양한 ablation study를 통해 가장 최적의 값을 구하고
+모델 평가에 사용된 지표는 accuracy가 있습니다.
+Accuracy (정확도)란, 전체 문제중에서 정답을 맞춘 비율입니다.
+Accuracy = TP+TN / TP+TN+FP+FN 으로
+
+TP : 모델이 정답을 맞췄을 때,
+
+TN : 모델이 오답을 맞췄을 때,
+
+FP : 모델이 오답을 정답으로 잘못 예측했을 때,
+
+FN : 모델이 정답을 오답으로 잘못 예측했을 때,
+
+**맞춘 예측의 수 / 전체 문제의 수**
+
+이렇게 볼 수 있기 때문에 감정을 인식하는데 있어서 얼마나 정확하게 맞출 수 있는지 정확도가 가장 중요하다고 생각해서 accuracy를 평가 지표로 사용했습니다.
+
+그래프는 각각 순서대로 (epochs10 batch16), (epochs10 batch32), (epochs50 batch16), (epochs50 batch32), (epochs50 batch32 + 데이터 증강), (resnet50+reduceLR), (MobileNetV2) 순서 입니다.
+이와 같이 다양한 ablation study를 통해 가장 최적의 값이 (epochs50 batch32)일 때 가장 높은 값이 나타나는 것을 확인 할 수 있었습니다.
 ![epochs10batch16](https://github.com/hyeoni0525/Facial-emotion-Recognition/assets/170999814/dae8787a-dd19-43c3-a01f-726f01dc6626)
 ![epochs10batch32](https://github.com/hyeoni0525/Facial-emotion-Recognition/assets/170999814/0c15e09e-a24e-4e02-8d7d-699e281df0de)
 ![epochs50batch16](https://github.com/hyeoni0525/Facial-emotion-Recognition/assets/170999814/0c18864a-ac64-41f2-aa5c-e364b5564281)
@@ -57,6 +75,3 @@ FER2013의 과제 얼굴 표정에 나타난 감정을 기반으로 각 얼굴�
 ![resnet50+reduceLR](https://github.com/hyeoni0525/Facial-emotion-Recognition/assets/170999814/a0d4fd97-9b50-47fe-8f3d-8cf26c3bcf74)
 ![MobileNetV2](https://github.com/hyeoni0525/Facial-emotion-Recognition/assets/170999814/7137f830-4c8a-489a-a4cc-5683d1a13dfb)
 
-***
-
-![곽철이](곽철이.png)

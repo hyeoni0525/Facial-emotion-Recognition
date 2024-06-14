@@ -78,8 +78,11 @@ FN : 모델이 정답을 오답으로 잘못 예측했을 때,
 
 -----
 ## 프로젝트 결과
-https://github.com/hyeoni0525/Facial-emotion-Recognition/assets/170999814/481bfad8-6aec-4299-86e7-83de6125c136
+![Emotions (3)](https://github.com/hyeoni0525/Facial-emotion-Recognition/assets/170999814/6d1b5278-522c-46ee-9056-c419bf498989)
+
+
 이를 토대로 영상의 각 프레임마다 테스트를 하고 dominant_emotion을 나타내도록 설정했습니다.
+
 단, 정확도가 낮을수록 감정이 잘못 나타나는 빈도가 많고 제 프로젝트의 경우 정확도가 60%이므로 정확도를 더 올려 오탐지 비율을 줄여야 할 것 입니다.
 
 

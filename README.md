@@ -75,3 +75,6 @@ FN : 모델이 정답을 오답으로 잘못 예측했을 때,
 ![resnet50+reduceLR](https://github.com/hyeoni0525/Facial-emotion-Recognition/assets/170999814/a0d4fd97-9b50-47fe-8f3d-8cf26c3bcf74)
 ![MobileNetV2](https://github.com/hyeoni0525/Facial-emotion-Recognition/assets/170999814/7137f830-4c8a-489a-a4cc-5683d1a13dfb)
 
+
+-----
+**프로젝트 결과**
